@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Streams | 一名GO+PHP工程师</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b3aba94c.css" as="style"><link rel="preload" href="/blog/assets/js/app.5a38db11.js" as="script"><link rel="preload" href="/blog/assets/js/3.21e2e031.js" as="script"><link rel="preload" href="/blog/assets/js/68.0a66e8af.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.cc3bb372.js"><link rel="prefetch" href="/blog/assets/js/100.35b5db36.js"><link rel="prefetch" href="/blog/assets/js/101.a70b97e2.js"><link rel="prefetch" href="/blog/assets/js/102.30af4d63.js"><link rel="prefetch" href="/blog/assets/js/103.c5c5130e.js"><link rel="prefetch" href="/blog/assets/js/104.161b590d.js"><link rel="prefetch" href="/blog/assets/js/105.eaae1ece.js"><link rel="prefetch" href="/blog/assets/js/106.028ce766.js"><link rel="prefetch" href="/blog/assets/js/107.c9b230ac.js"><link rel="prefetch" href="/blog/assets/js/108.a5880443.js"><link rel="prefetch" href="/blog/assets/js/109.bab44539.js"><link rel="prefetch" href="/blog/assets/js/11.ef5dbacc.js"><link rel="prefetch" href="/blog/assets/js/110.7ba602f1.js"><link rel="prefetch" href="/blog/assets/js/111.2b0b0a78.js"><link rel="prefetch" href="/blog/assets/js/112.6b9220f5.js"><link rel="prefetch" href="/blog/assets/js/113.6a2724aa.js"><link rel="prefetch" href="/blog/assets/js/114.ac347ea2.js"><link rel="prefetch" href="/blog/assets/js/115.17c6c526.js"><link rel="prefetch" href="/blog/assets/js/116.1fd8cdf3.js"><link rel="prefetch" href="/blog/assets/js/117.193b54e8.js"><link rel="prefetch" href="/blog/assets/js/118.8a3e18a9.js"><link rel="prefetch" href="/blog/assets/js/119.2a5bb73a.js"><link rel="prefetch" href="/blog/assets/js/12.2003a6c5.js"><link rel="prefetch" href="/blog/assets/js/120.edb5435e.js"><link rel="prefetch" href="/blog/assets/js/121.6e61cfa4.js"><link rel="prefetch" href="/blog/assets/js/122.8ce24886.js"><link rel="prefetch" href="/blog/assets/js/123.beccf42c.js"><link rel="prefetch" href="/blog/assets/js/124.416ddc09.js"><link rel="prefetch" href="/blog/assets/js/125.7be39e4f.js"><link rel="prefetch" href="/blog/assets/js/126.49439b56.js"><link rel="prefetch" href="/blog/assets/js/127.7d06eb7f.js"><link rel="prefetch" href="/blog/assets/js/128.9b247099.js"><link rel="prefetch" href="/blog/assets/js/129.6503c09f.js"><link rel="prefetch" href="/blog/assets/js/13.93951a43.js"><link rel="prefetch" href="/blog/assets/js/130.3fa988b7.js"><link rel="prefetch" href="/blog/assets/js/131.f93ef260.js"><link rel="prefetch" href="/blog/assets/js/132.7dca0041.js"><link rel="prefetch" href="/blog/assets/js/133.286b95ad.js"><link rel="prefetch" href="/blog/assets/js/134.88627057.js"><link rel="prefetch" href="/blog/assets/js/135.a28b714b.js"><link rel="prefetch" href="/blog/assets/js/136.fba0a306.js"><link rel="prefetch" href="/blog/assets/js/137.5540419d.js"><link rel="prefetch" href="/blog/assets/js/138.82fb7775.js"><link rel="prefetch" href="/blog/assets/js/139.787b1320.js"><link rel="prefetch" href="/blog/assets/js/14.379e0027.js"><link rel="prefetch" href="/blog/assets/js/140.b68497e2.js"><link rel="prefetch" href="/blog/assets/js/141.cd76190b.js"><link rel="prefetch" href="/blog/assets/js/142.8e56d4f0.js"><link rel="prefetch" href="/blog/assets/js/143.23971a8d.js"><link rel="prefetch" href="/blog/assets/js/144.8c41b407.js"><link rel="prefetch" href="/blog/assets/js/145.95b58ec4.js"><link rel="prefetch" href="/blog/assets/js/146.18132cf9.js"><link rel="prefetch" href="/blog/assets/js/147.8275026a.js"><link rel="prefetch" href="/blog/assets/js/148.cc2257d6.js"><link rel="prefetch" href="/blog/assets/js/149.a98d647c.js"><link rel="prefetch" href="/blog/assets/js/15.5376294f.js"><link rel="prefetch" href="/blog/assets/js/150.7360f0a5.js"><link rel="prefetch" href="/blog/assets/js/151.0cf39bd7.js"><link rel="prefetch" href="/blog/assets/js/152.6f7d01ad.js"><link rel="prefetch" href="/blog/assets/js/153.f6075040.js"><link rel="prefetch" href="/blog/assets/js/154.12eeb9b2.js"><link rel="prefetch" href="/blog/assets/js/155.65f03a29.js"><link rel="prefetch" href="/blog/assets/js/156.d2f6d50d.js"><link rel="prefetch" href="/blog/assets/js/157.f4384a9b.js"><link rel="prefetch" href="/blog/assets/js/158.34747ec7.js"><link rel="prefetch" href="/blog/assets/js/159.410bff01.js"><link rel="prefetch" href="/blog/assets/js/16.abdf559d.js"><link rel="prefetch" href="/blog/assets/js/160.53124933.js"><link rel="prefetch" href="/blog/assets/js/161.0ab0763e.js"><link rel="prefetch" href="/blog/assets/js/162.39021ec7.js"><link rel="prefetch" href="/blog/assets/js/163.596b82cf.js"><link rel="prefetch" href="/blog/assets/js/164.cbd2db78.js"><link rel="prefetch" href="/blog/assets/js/165.6e6c3d3a.js"><link rel="prefetch" href="/blog/assets/js/166.5bcaa3dd.js"><link rel="prefetch" href="/blog/assets/js/167.b4296d08.js"><link rel="prefetch" href="/blog/assets/js/168.27dc81ce.js"><link rel="prefetch" href="/blog/assets/js/169.661c763c.js"><link rel="prefetch" href="/blog/assets/js/17.8b47c823.js"><link rel="prefetch" href="/blog/assets/js/170.e41001f5.js"><link rel="prefetch" href="/blog/assets/js/171.0724bbd4.js"><link rel="prefetch" href="/blog/assets/js/172.2d5b541f.js"><link rel="prefetch" href="/blog/assets/js/173.41d6e737.js"><link rel="prefetch" href="/blog/assets/js/174.bccb9fa6.js"><link rel="prefetch" href="/blog/assets/js/175.b1a13486.js"><link rel="prefetch" href="/blog/assets/js/176.6e26a58e.js"><link rel="prefetch" href="/blog/assets/js/177.67fa30a9.js"><link rel="prefetch" href="/blog/assets/js/178.7f4bf5e6.js"><link rel="prefetch" href="/blog/assets/js/18.6a619898.js"><link rel="prefetch" href="/blog/assets/js/19.ea80b1e1.js"><link rel="prefetch" href="/blog/assets/js/2.04feeb4a.js"><link rel="prefetch" href="/blog/assets/js/20.77762601.js"><link rel="prefetch" href="/blog/assets/js/21.656ab41e.js"><link rel="prefetch" href="/blog/assets/js/22.5922a16f.js"><link rel="prefetch" href="/blog/assets/js/23.41929ef9.js"><link rel="prefetch" href="/blog/assets/js/24.3b850e15.js"><link rel="prefetch" href="/blog/assets/js/25.aade9e50.js"><link rel="prefetch" href="/blog/assets/js/26.36c6a527.js"><link rel="prefetch" href="/blog/assets/js/27.907a8228.js"><link rel="prefetch" href="/blog/assets/js/28.cc2bee0d.js"><link rel="prefetch" href="/blog/assets/js/29.52c7bfa4.js"><link rel="prefetch" href="/blog/assets/js/30.f034dd77.js"><link rel="prefetch" href="/blog/assets/js/31.edcef4fa.js"><link rel="prefetch" href="/blog/assets/js/32.6735d3e7.js"><link rel="prefetch" href="/blog/assets/js/33.28f8dc69.js"><link rel="prefetch" href="/blog/assets/js/34.8a729d66.js"><link rel="prefetch" href="/blog/assets/js/35.920cdf75.js"><link rel="prefetch" href="/blog/assets/js/36.15f2a36b.js"><link rel="prefetch" href="/blog/assets/js/37.5b03bd21.js"><link rel="prefetch" href="/blog/assets/js/38.fed1555d.js"><link rel="prefetch" href="/blog/assets/js/39.68d965cd.js"><link rel="prefetch" href="/blog/assets/js/4.644e7959.js"><link rel="prefetch" href="/blog/assets/js/40.069924f4.js"><link rel="prefetch" href="/blog/assets/js/41.a44d976c.js"><link rel="prefetch" href="/blog/assets/js/42.47caadd3.js"><link rel="prefetch" href="/blog/assets/js/43.b1eb7b31.js"><link rel="prefetch" href="/blog/assets/js/44.96773f8a.js"><link rel="prefetch" href="/blog/assets/js/45.328fda2a.js"><link rel="prefetch" href="/blog/assets/js/46.24f71020.js"><link rel="prefetch" href="/blog/assets/js/47.96df34c4.js"><link rel="prefetch" href="/blog/assets/js/48.b0bfea08.js"><link rel="prefetch" href="/blog/assets/js/49.3dac2a21.js"><link rel="prefetch" href="/blog/assets/js/5.0760b076.js"><link rel="prefetch" href="/blog/assets/js/50.97f9d2b0.js"><link rel="prefetch" href="/blog/assets/js/51.29fb5c68.js"><link rel="prefetch" href="/blog/assets/js/52.d2042f8d.js"><link rel="prefetch" href="/blog/assets/js/53.02c82b26.js"><link rel="prefetch" href="/blog/assets/js/54.667f483f.js"><link rel="prefetch" href="/blog/assets/js/55.b6b1e0e7.js"><link rel="prefetch" href="/blog/assets/js/56.bd954c20.js"><link rel="prefetch" href="/blog/assets/js/57.45722d8c.js"><link rel="prefetch" href="/blog/assets/js/58.17cd106d.js"><link rel="prefetch" href="/blog/assets/js/59.51661424.js"><link rel="prefetch" href="/blog/assets/js/6.d309aec3.js"><link rel="prefetch" href="/blog/assets/js/60.18a9a452.js"><link rel="prefetch" href="/blog/assets/js/61.819ab903.js"><link rel="prefetch" href="/blog/assets/js/62.24bf6999.js"><link rel="prefetch" href="/blog/assets/js/63.2f87f55d.js"><link rel="prefetch" href="/blog/assets/js/64.68cd3b45.js"><link rel="prefetch" href="/blog/assets/js/65.7fe0d182.js"><link rel="prefetch" href="/blog/assets/js/66.948be4c4.js"><link rel="prefetch" href="/blog/assets/js/67.2522194c.js"><link rel="prefetch" href="/blog/assets/js/69.07a744c4.js"><link rel="prefetch" href="/blog/assets/js/7.073a2745.js"><link rel="prefetch" href="/blog/assets/js/70.c0e92ba6.js"><link rel="prefetch" href="/blog/assets/js/71.97a4d551.js"><link rel="prefetch" href="/blog/assets/js/72.78fc6941.js"><link rel="prefetch" href="/blog/assets/js/73.3e3efdc5.js"><link rel="prefetch" href="/blog/assets/js/74.cff95a30.js"><link rel="prefetch" href="/blog/assets/js/75.6c4af1f1.js"><link rel="prefetch" href="/blog/assets/js/76.96c205c1.js"><link rel="prefetch" href="/blog/assets/js/77.31c8dd27.js"><link rel="prefetch" href="/blog/assets/js/78.41729cec.js"><link rel="prefetch" href="/blog/assets/js/79.12735350.js"><link rel="prefetch" href="/blog/assets/js/8.5e05a8d5.js"><link rel="prefetch" href="/blog/assets/js/80.e5005d72.js"><link rel="prefetch" href="/blog/assets/js/81.04f50a1e.js"><link rel="prefetch" href="/blog/assets/js/82.db879ca5.js"><link rel="prefetch" href="/blog/assets/js/83.e89b8863.js"><link rel="prefetch" href="/blog/assets/js/84.07410b58.js"><link rel="prefetch" href="/blog/assets/js/85.d46c8682.js"><link rel="prefetch" href="/blog/assets/js/86.3869d59e.js"><link rel="prefetch" href="/blog/assets/js/87.e7860b15.js"><link rel="prefetch" href="/blog/assets/js/88.2b183553.js"><link rel="prefetch" href="/blog/assets/js/89.36e67a82.js"><link rel="prefetch" href="/blog/assets/js/9.8a6a0670.js"><link rel="prefetch" href="/blog/assets/js/90.acd5023c.js"><link rel="prefetch" href="/blog/assets/js/91.d1662d38.js"><link rel="prefetch" href="/blog/assets/js/92.4093acc4.js"><link rel="prefetch" href="/blog/assets/js/93.f09d7ba1.js"><link rel="prefetch" href="/blog/assets/js/94.1e2891fe.js"><link rel="prefetch" href="/blog/assets/js/95.83afadb6.js"><link rel="prefetch" href="/blog/assets/js/96.85084d66.js"><link rel="prefetch" href="/blog/assets/js/97.16a7a60a.js"><link rel="prefetch" href="/blog/assets/js/98.a84fee2e.js"><link rel="prefetch" href="/blog/assets/js/99.f9452cba.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b3aba94c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">一名GO+PHP工程师</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://gitee.com/ColinWWL/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  码云Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://gitee.com/ColinWWL/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  码云Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/blog/消息队列/Kafka/1概述" class="sidebar-heading clickable open"><span>Kafka</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/消息队列/Kafka/1概述.html" class="sidebar-link">概述</a></li><li><a href="/blog/消息队列/Kafka/2集群部署.html" class="sidebar-link">集群部署</a></li><li><a href="/blog/消息队列/Kafka/3工作流程分析.html" class="sidebar-link">工作流程分析</a></li><li><a href="/blog/消息队列/Kafka/5producer拦截器-interceptor.html" class="sidebar-link">producer拦截器(interceptor)</a></li><li><a href="/blog/消息队列/Kafka/6Streams.html" class="active sidebar-link">Streams</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/消息队列/Kafka/6Streams.html#概述" class="sidebar-link">概述</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/消息队列/Kafka/6Streams.html#streams-2" class="sidebar-link">Streams</a></li><li class="sidebar-sub-header"><a href="/blog/消息队列/Kafka/6Streams.html#streams特点" class="sidebar-link">Streams特点</a></li><li class="sidebar-sub-header"><a href="/blog/消息队列/Kafka/6Streams.html#为什么要有kafka-stream" class="sidebar-link">为什么要有Kafka Stream</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/消息队列/Kafka/6Streams.html#stream数据清洗案例" class="sidebar-link">Stream数据清洗案例</a></li></ul></li><li><a href="/blog/消息队列/Kafka/7扩展.html" class="sidebar-link">扩展</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="streams"><a href="#streams" class="header-anchor">#</a> Streams</h1> <h2 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h2> <h3 id="streams-2"><a href="#streams-2" class="header-anchor">#</a> Streams</h3> <p>Kafka Streams。Apache Kafka开源项目的一个组成部分。是一个功能强大，易于使用的库。用于在Kafka上构建高可分布式、拓展性，容错的应用程序。</p> <h3 id="streams特点"><a href="#streams特点" class="header-anchor">#</a> Streams特点</h3> <p>1）功能强大</p> <p>高扩展性，弹性，容错</p> <p>2）轻量级</p> <p>无需专门的集群</p> <p>一个库，而不是框架</p> <p>3）完全集成</p> <p>100%的Kafka 0.10.0版本兼容</p> <p>易于集成到现有的应用程序</p> <p>4）实时性</p> <p>毫秒级延迟</p> <p>并非微批处理</p> <p>窗口允许乱序数据</p> <p>允许迟到数据</p> <h3 id="为什么要有kafka-stream"><a href="#为什么要有kafka-stream" class="header-anchor">#</a> 为什么要有Kafka Stream</h3> <p>当前已经有非常多的流式处理系统，最知名且应用最多的开源流式处理系统有Spark Streaming和Apache Storm。Apache Storm发展多年，应用广泛，提供记录级别的处理能力，当前也支持SQL on Stream。而Spark Streaming基于Apache Spark，可以非常方便与图计算，SQL处理等集成，功能强大，对于熟悉其它Spark应用开发的用户而言使用门槛低。另外，目前主流的Hadoop发行版，如Cloudera和Hortonworks，都集成了Apache Storm和Apache Spark，使得部署更容易。</p> <p>既然Apache Spark与Apache Storm拥用如此多的优势，那为何还需要Kafka Stream呢？主要有如下原因。</p> <p>第一，Spark和Storm都是流式处理框架，而Kafka Stream提供的是一个基于Kafka的流式处理类库。框架要求开发者按照特定的方式去开发逻辑部分，供框架调用。开发者很难了解框架的具体运行方式，从而使得调试成本高，并且使用受限。而Kafka Stream作为流式处理类库，直接提供具体的类给开发者调用，整个应用的运行方式主要由开发者控制，方便使用和调试。</p> <p><img src="/blog/assets/img/2021-05-15-19-27-52.266024fb.png" alt=""></p> <p>第二，虽然Cloudera与Hortonworks方便了Storm和Spark的部署，但是这些框架的部署仍然相对复杂。而Kafka Stream作为类库，可以非常方便的嵌入应用程序中，它对应用的打包和部署基本没有任何要求。</p> <p>第三，就流式处理系统而言，基本都支持Kafka作为数据源。例如Storm具有专门的kafka-spout，而Spark也提供专门的spark-streaming-kafka模块。事实上，Kafka基本上是主流的流式处理系统的标准数据源。换言之，大部分流式系统中都已部署了Kafka，此时使用Kafka Stream的成本非常低。</p> <p>第四，使用Storm或Spark Streaming时，需要为框架本身的进程预留资源，如Storm的supervisor和Spark on YARN的node manager。即使对于应用实例而言，框架本身也会占用部分资源，如Spark Streaming需要为shuffle和storage预留内存。但是Kafka作为类库不占用系统资源。</p> <p>第五，由于Kafka本身提供数据持久化，因此Kafka Stream提供滚动部署和滚动升级以及重新计算的能力。</p> <p>第六，由于Kafka Consumer Rebalance机制，Kafka Stream可以在线动态调整并行度。</p> <h2 id="stream数据清洗案例"><a href="#stream数据清洗案例" class="header-anchor">#</a> Stream数据清洗案例</h2> <p>0）需求：</p> <p>​实时处理单词带有”&gt;&gt;&gt;”前缀的内容。例如输入”atguigu&gt;&gt;&gt;ximenqing”，最终处理成“ximenqing”</p> <p>1）需求分析：<br> <img src="/blog/assets/img/2021-05-15-19-29-01.ee021515.png" alt=""></p> <p>2）案例实操</p> <p>（1）创建一个工程，并添加jar包</p> <p>（2）创建主类</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>atguigu<span class="token punctuation">.</span>kafka<span class="token punctuation">.</span>stream</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Properties</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>kafka<span class="token punctuation">.</span>streams<span class="token punctuation">.</span></span><span class="token class-name">KafkaStreams</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>kafka<span class="token punctuation">.</span>streams<span class="token punctuation">.</span></span><span class="token class-name">StreamsConfig</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>kafka<span class="token punctuation">.</span>streams<span class="token punctuation">.</span>processor<span class="token punctuation">.</span></span><span class="token class-name">Processor</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>kafka<span class="token punctuation">.</span>streams<span class="token punctuation">.</span>processor<span class="token punctuation">.</span></span><span class="token class-name">ProcessorSupplier</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>kafka<span class="token punctuation">.</span>streams<span class="token punctuation">.</span>processor<span class="token punctuation">.</span></span><span class="token class-name">TopologyBuilder</span><span class="token punctuation">;</span>
+
+ 
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Application</span> <span class="token punctuation">{</span>
+
+ 
+
+​	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+ 
+
+​		<span class="token comment">// 定义输入的topic</span>
+
+​    <span class="token class-name">String</span> from <span class="token operator">=</span> <span class="token string">&quot;first&quot;</span><span class="token punctuation">;</span>
+
+​    <span class="token comment">// 定义输出的topic</span>
+
+​    <span class="token class-name">String</span> <span class="token keyword">to</span> <span class="token operator">=</span> <span class="token string">&quot;second&quot;</span><span class="token punctuation">;</span>
+
+ 
+
+​    <span class="token comment">// 设置参数</span>
+
+​    <span class="token class-name">Properties</span> settings <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+​    settings<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token class-name">StreamsConfig</span><span class="token punctuation">.</span>APPLICATION_ID_CONFIG<span class="token punctuation">,</span> <span class="token string">&quot;logFilter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+​    settings<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token class-name">StreamsConfig</span><span class="token punctuation">.</span>BOOTSTRAP_SERVERS_CONFIG<span class="token punctuation">,</span> <span class="token string">&quot;hadoop102:9092&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ 
+
+​    <span class="token class-name">StreamsConfig</span> config <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StreamsConfig</span><span class="token punctuation">(</span>settings<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ 
+
+​    <span class="token comment">// 构建拓扑</span>
+
+​    <span class="token class-name">TopologyBuilder</span> builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TopologyBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ 
+
+​    builder<span class="token punctuation">.</span><span class="token function">addSource</span><span class="token punctuation">(</span><span class="token string">&quot;SOURCE&quot;</span><span class="token punctuation">,</span> from<span class="token punctuation">)</span>
+
+​        <span class="token punctuation">.</span><span class="token function">addProcessor</span><span class="token punctuation">(</span><span class="token string">&quot;PROCESS&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ProcessorSupplier</span><span class="token operator">&lt;</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+ 
+
+​					<span class="token annotation punctuation">@Override</span>
+
+​					<span class="token keyword">public</span> <span class="token class-name">Processor</span><span class="token operator">&lt;</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+​						<span class="token comment">// 具体分析处理</span>
+
+​						<span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">LogProcessor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+​					<span class="token punctuation">}</span>
+
+​				<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">&quot;SOURCE&quot;</span><span class="token punctuation">)</span>
+
+​        <span class="token punctuation">.</span><span class="token function">addSink</span><span class="token punctuation">(</span><span class="token string">&quot;SINK&quot;</span><span class="token punctuation">,</span> <span class="token keyword">to</span><span class="token punctuation">,</span> <span class="token string">&quot;PROCESS&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ 
+
+​    <span class="token comment">// 创建kafka stream</span>
+
+​    <span class="token class-name">KafkaStreams</span> streams <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">KafkaStreams</span><span class="token punctuation">(</span>builder<span class="token punctuation">,</span> config<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+​    streams<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+​	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>（3）具体业务处理</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>atguigu<span class="token punctuation">.</span>kafka<span class="token punctuation">.</span>stream</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>kafka<span class="token punctuation">.</span>streams<span class="token punctuation">.</span>processor<span class="token punctuation">.</span></span><span class="token class-name">Processor</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>kafka<span class="token punctuation">.</span>streams<span class="token punctuation">.</span>processor<span class="token punctuation">.</span></span><span class="token class-name">ProcessorContext</span><span class="token punctuation">;</span>
+
+ 
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LogProcessor</span> <span class="token keyword">implements</span> <span class="token class-name">Processor</span><span class="token operator">&lt;</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+
+​	
+
+​	<span class="token keyword">private</span> <span class="token class-name">ProcessorContext</span> context<span class="token punctuation">;</span>
+
+​	
+
+​	<span class="token annotation punctuation">@Override</span>
+
+​	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token class-name">ProcessorContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+​		<span class="token keyword">this</span><span class="token punctuation">.</span>context <span class="token operator">=</span> context<span class="token punctuation">;</span>
+
+​	<span class="token punctuation">}</span>
+
+ 
+
+​	<span class="token annotation punctuation">@Override</span>
+
+​	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">process</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> key<span class="token punctuation">,</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+​		<span class="token class-name">String</span> input <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+​		
+
+​		<span class="token comment">// 如果包含“&gt;&gt;&gt;”则只保留该标记后面的内容</span>
+
+​		<span class="token keyword">if</span> <span class="token punctuation">(</span>input<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">&quot;&gt;&gt;&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+​			input <span class="token operator">=</span> input<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">&quot;&gt;&gt;&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+​			<span class="token comment">// 输出到下一个topic</span>
+
+​			context<span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span><span class="token string">&quot;logProcessor&quot;</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> input<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+​		<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+
+​			context<span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span><span class="token string">&quot;logProcessor&quot;</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> input<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+​		<span class="token punctuation">}</span>
+
+​	<span class="token punctuation">}</span>
+
+ 
+
+​	<span class="token annotation punctuation">@Override</span>
+
+​	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">punctuate</span><span class="token punctuation">(</span><span class="token keyword">long</span> timestamp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+​		
+
+​	<span class="token punctuation">}</span>
+
+ 
+
+​	<span class="token annotation punctuation">@Override</span>
+
+​	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+​		
+
+​	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>（4）运行程序</p> <p>（5）在hadoop104上启动生产者</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token punctuation">[</span>atguigu@hadoop104 kafka<span class="token punctuation">]</span>$ bin/kafka-console-producer.sh <span class="token punctuation">\</span>
+
+--broker-list hadoop102:9092 --topic first
+
+<span class="token punctuation">\</span><span class="token operator">&gt;</span>hello<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>world
+
+<span class="token punctuation">\</span><span class="token operator">&gt;</span>h<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>atguigu
+
+<span class="token punctuation">\</span><span class="token operator">&gt;</span>hahaha
+
+</code></pre></div><p>（6）在hadoop103上启动消费者</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token punctuation">[</span>atguigu@hadoop103 kafka<span class="token punctuation">]</span>$ bin/kafka-console-consumer.sh <span class="token punctuation">\</span>
+
+--zookeeper hadoop102:2181 --from-beginning --topic second
+
+world
+
+atguigu
+
+hahaha
+
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">5/21/2021, 1:25:38 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/消息队列/Kafka/5producer拦截器-interceptor.html" class="prev">
+        producer拦截器(interceptor)
+      </a></span> <span class="next"><a href="/blog/消息队列/Kafka/7扩展.html">
+        扩展
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.5a38db11.js" defer></script><script src="/blog/assets/js/3.21e2e031.js" defer></script><script src="/blog/assets/js/68.0a66e8af.js" defer></script>
+  </body>
+</html>
